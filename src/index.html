@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="thali">
+   <head>
+      <meta charset="utf-8">
+      <title>Thali</title>
+      <meta name="description" content="">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+      <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+      <!-- TODO remove once we get our icon set -->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+      <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+      <!-- bower:css -->
+      <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- build:css({.tmp/serve,src}) styles/app.css -->
+      <!-- inject:css -->
+      <!-- css files will be automatically insert here -->
+      <!-- endinject -->
+      <!-- endbuild -->
+
+   </head>
+   <body>
+      <!--[if lt IE 10]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+         <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <!-- container div used by vfeed to take screenshot of whole content -->
+      <div ui-view></div>
+
+      <!-- build:js(src) scripts/vendor.js -->
+      <!-- bower:js -->
+      <!-- run `gulp inject` to automatically populate bower script dependencies -->
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+      <!-- inject:js -->
+      <!-- js files will be automatically insert here -->
+      <!-- endinject -->
+
+      <!-- inject:partials -->
+      <!-- angular templates will be automatically converted in js and inserted here -->
+      <!-- endinject -->
+      <!-- endbuild -->
+      <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+   </body>
+</html>

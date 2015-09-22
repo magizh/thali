@@ -1,0 +1,46 @@
+// Copyright (c) 2015 Thali, Inc.
+
+// Tabs
+$tab-active-border-color: $blue;
+$tab-active-text-color: $primary-theme-color;
+$tab-text-color: $light-grey-1;
+
+.bs-tab-container {
+   display: block;
+   width: 100%;
+   .bs-tab-bar {
+      display         : flex;
+      flex-direction  : row;
+      justify-content : center; // ⇾
+      align-content   : space-between; // ||
+      align-items     : flex-start; // ↓
+      list-style: none;
+      padding         : 0;
+      li {
+         margin: 0 15px 0 15px;
+         a {
+            border: none;
+
+            float: left;
+            position: relative;
+            display: block;
+
+            color: red;
+            text-decoration: none;
+            height: 24px;
+
+            text-align: center;
+            font-weight: 500;
+            font-size: 18px;
+
+            color: $tab-text-color;
+            overflow: hidden;
+
+            &.active {
+               color: $tab-active-text-color;
+               border-bottom: 2px solid $tab-active-border-color;
+            }
+         }
+      }
+   }
+}

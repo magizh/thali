@@ -1,0 +1,28 @@
+// All global from element styles go here.
+
+input {
+   // To avaoid weird styles in mobile.
+   // @TODO check if this is required after moving to new look for inputs.
+   -webkit-appearance: none;
+   border-radius: 0;
+   height: 30px;
+}
+
+.bs-form {
+   label {
+      font-size: 18px;
+      color: $form-label-color;
+   }
+}
+
+.bs-info-message {
+   margin-top: 10px;
+}
+
+.bs-text-danger {
+   color: $text-danger;
+}
+
+.bs-text-success {
+   color: $text-success;
+}

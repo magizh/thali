@@ -1,0 +1,25 @@
+// Global styles
+
+hr {
+  clear: both;
+}
+
+body {
+  font-size: 14px;
+  background: $background-color;
+}
+
+* {
+   font-size: 100%;
+   font-family: $fallback-font;
+}
+
+// Smaller text on cards
+.redundant-text {
+   font-size: 12px;
+}
+
+// Utils
+.pull-right {
+  float: right;
+}

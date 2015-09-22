@@ -1,0 +1,83 @@
+// Card variables
+$overview-card-width-lg: 720px;
+$circle-small: 42px;
+
+// Generic card styles
+@mixin card-box-shadow($color) {
+   box-shadow: 0px 3px 0px 0px $color;
+}
+
+.bs-card {
+   @include card-box-shadow($box-shadow-color);
+   border-radius: 3px;
+   border: 1px solid $card-border-color;
+   background: white;
+}
+
+//Styles for over view cards
+.overview-card-container {
+   padding: 0px;
+   .overview-card {
+      @extend .bs-card;
+      position: relative;
+      width: $overview-card-width-lg;
+      margin: 0px auto 50px auto;
+      max-height: 300px;
+      padding: 40px 40px 20px 40px;
+      user-select: none;
+      animation: fly-in-from-left .5s 0s ease both;
+      transform-origin: top left;
+      transition: all .5s;
+      @media (max-width: 860px) {
+         width: 90%;
+      }
+      .type-icon {
+         // Styles for positioning icons
+         position: absolute;
+         top:  -($circle-small/2);
+         left: 50%;
+         margin-left:  -($circle-small/2);
+      }
+      .overview-title {
+         text-align: center;
+         font-size: 20px;
+         margin: 0px;
+      }
+      .overview-content {
+         font-size: 16px;
+         color: $light-grey-1;
+      }
+      &.alert {
+         .overview-title {
+            color: $alert-color;
+         }
+         &:hover:not(.expanded) {
+             @include card-box-shadow($alert-color);
+            border-color: $alert-color;
+         }
+      }
+      &.recommendation {
+         .overview-title {
+            color: $recommendation-color;
+         }
+         &:hover:not(.expanded) {
+            @include card-box-shadow($recommendation-color);
+            border-color: $recommendation-color;
+         }
+      }
+      &.expanded {
+         height: 100%;
+         max-height: none;
+         animation: none;
+         .type-icon {
+            left: 0px;
+         }
+      }
+   }
+   @keyframes fly-in-from-left {
+      from {
+         transform: translateY(15rem) rotate(15deg);
+         opacity: 0;
+      }
+   }
+}

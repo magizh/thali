@@ -1,0 +1,44 @@
+$button-shadow-height: 3px;
+$inverted-text-color: $white;
+$default-button-color : $white;
+$primary-button-color: $blue;
+
+@mixin button-color($color) {
+   $darker-color: darken($color, 10%);
+   $button-text-color: $primary-theme-color;
+   @if lightness($color) < 80 {
+      $button-text-color: $inverted-text-color;
+   }
+   background: $color;
+   border: 1px solid $darker-color;
+   box-shadow: 0 $button-shadow-height 0 0 $darker-color;
+   color: $button-text-color;
+}
+
+button, .bs-button {
+   @include button-color($default-button-color);
+   padding: 14px 22px;
+   height: 44px;
+   outline: none;
+   border-radius: 3px;
+   font-size: 14px;
+   text-transform: uppercase;
+   cursor: pointer;
+   font-family: $fallback-font;
+
+   &.bs-primary {
+      @include button-color($primary-button-color);
+   }
+
+   &:active:not(.disabled) {
+      position: relative;
+      top: $button-shadow-height;
+      box-shadow: none;
+   }
+   // TODO get styles for focus
+
+   &:disabled, &.disabled {
+      opacity: 0.4;
+      cursor: default;
+   }
+}

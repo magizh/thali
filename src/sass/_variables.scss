@@ -1,0 +1,30 @@
+// Fonts
+$fallback-font: sans-serif;
+
+// Theme Colors with decreasing opacity
+$red : #CC645F;
+$dark-red: #a3504c;
+$blue: #3A87C5;
+$dark-blue: #2E6C9D;
+$dark-grey: #44535F; // overall theme
+$green: #91c661;
+$light-grey-1: #909FAB; // mostly for less imp labels
+$light-grey-2: #ddd;
+$orange: #F9A54D;
+$white: #ffffff;
+
+// Form element colors (not final)
+$form-label-color: #DCDCDC;
+$text-success: #3c763d;
+$text-danger: #F44336;
+$background-color: #f7f8f9;
+$box-shadow-color: #E6E6E6;
+$alert-color: $red;
+$primary-theme-color: $dark-grey;
+$recommendation-color: $blue;
+
+// Global toolbar/navbar
+$navbar-width: 80px;
+
+//cards
+$card-border-color: #E6E6E6;

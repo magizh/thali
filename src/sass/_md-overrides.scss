@@ -1,0 +1,17 @@
+
+// All global core element styles from material design are overridden here.
+
+html, body {
+   -webkit-font-smoothing: auto;
+   background: #f7f8f9;
+}
+
+// Blue background for checkbox
+// by defaut its pink
+md-checkbox{
+   &.md-checked {
+      .md-icon {
+         background-color: $blue;
+      }
+   }
+}
