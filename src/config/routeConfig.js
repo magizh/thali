@@ -16,6 +16,15 @@
                url: '/',
                templateUrl: 'modules/home/home.html',
                controller: 'HomeController as homeCtrl'
+            })
+            .state('plan', {
+               url: '/plan',
+               templateUrl: 'modules/dashboard/dashboard.html',
+               controller: 'DashboardController as dashCtrl'
+            })
+            .state('plan.category', {
+               url: '/:type',
+               templateUrl: 'modules/dashboard/sample.html'
             });
       }
 })();

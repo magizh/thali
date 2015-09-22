@@ -6,6 +6,7 @@
    angular
      .module('thali', [
          'ui.router',
-         'thali.home'
+         'thali.home',
+         'thali.dashboard'
       ]);
 })();
